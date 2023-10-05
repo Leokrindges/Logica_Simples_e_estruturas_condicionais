@@ -1,8 +1,7 @@
 //questao 1
 
 const minhaIdade = 28;
-console.log(`Minha idade é ${minhaIdade} anos`);
-
+document.write("<p>" + `Minha idade é ${minhaIdade} anos`);
 
 //questão 2
 
@@ -11,7 +10,7 @@ let y = 50;
 let resultado;
 
 resultado = x + y;
-console.log(`O resultado da soma de x e y é ${resultado}`);
+document.write("<p>" + `O resultado da soma de x e y é ${resultado}`);
 
 
 //questão 3
@@ -20,8 +19,8 @@ let totalCompra = 149.90;
 let totalParcelas = 2;
 let valorParcela = totalCompra / totalParcelas;
 
-console.log(`O valor total da compra foi R$ ${totalCompra}`);
-console.log(`Forma de pagamento: ${totalParcelas} de R$ ${valorParcela}`)
+document.write("<p>" + `O valor total da compra foi R$ ${totalCompra}`);
+document.write("<p>" + `Forma de pagamento: ${totalParcelas} de R$ ${valorParcela}`)
 
 //questão 4
 
@@ -29,7 +28,7 @@ let minutos = 120;
 
 let segudos = minutos * 60;
 
-console.log(`${minutos} minutos equivale à ${segudos} segundos`)
+document.write("<p>" + `${minutos} minutos equivale à ${segudos} segundos`)
 
 //questão 5
 
@@ -41,7 +40,7 @@ let nota3 = 7;
 
 let media = (nota1 + nota2 + nota3) / 3;
 
-console.log(`O aluno ${nomeAluno} ficou com a média ${media}`);
+document.write("<p>" + `O aluno ${nomeAluno} ficou com a média ${media}`);
 
 //questão 6
 
@@ -52,12 +51,26 @@ let aux = a;
 a = b;
 b = aux;
 
-console.log(`Valor de 'a' ${a}, valor de 'b' ${b}`);
+document.write("<p>" + `Valor de 'a' ${a}, valor de 'b' ${b}`);
 
 
 //questão 7
 
+let nulo = 10;
+let brancos = 20;
+let validos = 70;
+let totalVotos = nulo + brancos + validos;
 
+let porcentNulos = (nulo / totalVotos) * 100;
+let porcentBrancos = (brancos / totalVotos) * 100;
+let porcentValidos = (validos / totalVotos) * 100;
+
+
+document.write("<p>" + `${porcentValidos.toFixed(2)}% dos ${totalVotos} votos são validos: `);
+
+document.write("<p>" + `${porcentBrancos.toFixed(2)}% dos ${totalVotos} votos são brancos: `);
+
+document.write("<p>" + `${porcentNulos.toFixed(2)}% dos ${totalVotos} votos são nulos: `);
 
 //questão 8
 
@@ -65,15 +78,15 @@ let valor1 = 10;
 let valor2 = 15;
 
 if (valor1 == valor2) {
-    console.log("Números iguais");
+    document.write("<p>" + "Números iguais");
 }
 
-if(valor1 > valor2) {
-    console.log("Primeio é maior");
+if (valor1 > valor2) {
+    document.write("<p>" + "Primeio é maior");
 }
 
-if(valor1 < valor2) {
-    console.log("Segundo é maior")
+if (valor1 < valor2) {
+    document.write("<p>" + "Segundo é maior");
 }
 
 
@@ -84,13 +97,13 @@ let PrecoMaisDeUmaDuzia = 0.25;
 let quantidade = 15;
 let totalDaCompra;
 
-if(quantidade >= 12) {
-    totalCompra = quantidade * PrecoMaisDeUmaDuzia;  
-    console.log(`Você comprou pelo menos uma duzia e vai pagar um total de ${totalCompra}`);
-  
-}else {
-     totalCompra = quantidade * PrecoMenosDeUmaDuzia;
-     console.log(`Você comprou menos de uma duzia e vai pagar um total de ${totalCompra}`);
+if (quantidade >= 12) {
+    totalCompra = quantidade * PrecoMaisDeUmaDuzia;
+    document.write("<p>" + `Você comprou pelo menos uma duzia e vai pagar um total de ${totalCompra}`);
+
+} else {
+    totalCompra = quantidade * PrecoMenosDeUmaDuzia;
+    document.write("<p>" + `Você comprou menos de uma duzia e vai pagar um total de ${totalCompra}`);
 
 }
 
@@ -101,7 +114,35 @@ let nomeUsuario = "Leonardo Krindges";
 
 let anoNascimento = 2023 - idadeUsuario;
 
-console.log(`Nome: ${nomeUsuario}, Idade: ${idadeUsuario} anos, nasceu em ${anoNascimento}`);
+document.write("<p>" + `Nome: ${nomeUsuario}, Idade: ${idadeUsuario} anos, nasceu em ${anoNascimento}`);
 
 //questão 11
+
+let numeroInteiroPositivo = 7;
+
+if (numeroInteiroPositivo % 2 == 0) {
+    document.write("<p>" + `Número par`);
+} else {
+    document.write("<p>" + `Número ímpar`);
+}
+
+//questão 12
+
+let anoAtual = 2023;
+let anoNasc = 2005
+
+let idadeEleitor = anoAtual - anoNasc;
+
+if (idadeEleitor < 16) {
+    document.write("<p>" + `Sua idade é ${idadeEleitor} anos, você não pode votar`);
+} else {
+    if (idadeEleitor >= 16 && idadeEleitor < 18) {
+        document.write("<p>" + `Sua idade é ${idadeEleitor} anos, voto é opcional`);
+    } else {
+        if (idadeEleitor >= 18) {
+            document.write("<p>" + `Sua idade é ${idadeEleitor} anos, voto é obrigatório`);
+        }
+    }
+}
+
 

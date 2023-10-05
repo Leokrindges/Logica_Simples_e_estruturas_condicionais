@@ -1,1 +1,2 @@
  - Atividade para praticar logica de programação na Formação de Web Full Stack da Growdev.
+ -adicionado metodo document.write() para jogar os resultados no viewport
